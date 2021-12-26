@@ -1,0 +1,16 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% if is_logged_in %}
+        <p>{{username}} Successfully logged in</p><br/>
+        {% elif error %}
+        <p>{{error}}</p><br/>
+        {% endif %}
+        <form method="post">
+            {{ form.as_p }}
+            <input type="submit">
+        </form>
+    </body>
+</html>
